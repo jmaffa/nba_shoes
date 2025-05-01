@@ -2,12 +2,53 @@ body, html {
   margin: 0;
   padding: 0;
   height: 100%;
+  font-family: forma-djr-display, sans-serif;
 }
 .chart-container {
   flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+img, p, h1, h2, h3, .divider, iframe{
+    width: 100%;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+h1 {
+    font-weight: 900;
+    font-style: normal;
+    font-size: 64px;
+}
+h2 {
+    font-weight: 600;
+    font-style: italic;
+    font-size: 32px;
+}
+p {
+    font-family: "early-sans-variable", sans-serif;
+    font-variation-settings: "wght" 300;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 2.0;
+}
+
+.video-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+}
+
+iframe {
+  max-width: 60%;
+  height: 30vw;
+}
+
+img {
+	display: block;
+    padding: 15px 0px;
 }
 
 svg {
@@ -29,28 +70,6 @@ svg {
 }
 
 
-
-
-img, p, h1, h2, .divider{
-    width: 100%;
-    max-width: 640px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-img {
-	display: block;
-    padding: 15px 0px;
-}
-p{
-    font-size: 18px;
-    line-height: 1.4;
-    font-family: "Crimson Text"
-}
-h1,h2 {
-    font-family: "Roboto"
-}
-
 .divider {
     height: 2px;
     background-color: #0868ac;
@@ -63,9 +82,7 @@ h1,h2 {
     font-size: 14px;
     color:blueviolet
 }
-#lebron {
-    max-width: 1000px;
-}
+
 
 .line {
   fill: none;

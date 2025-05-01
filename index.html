@@ -4,31 +4,74 @@
   <meta charset="UTF-8">
   <title>It's Gotta Be the Shoes</title>
   <script src="https://d3js.org/d3.v7.min.js"></script>
+  <link rel="stylesheet" href="https://use.typekit.net/heq0boe.css">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>It's Gotta Be the Shoes</h1>
-  <div></div>
-  <iframe 
-    width="560" 
-    height="315" 
+  <!-- Video Header -->
+  <div class="video-wrapper">
+    <iframe 
+    width="1000" 
+    height="1000" 
     src="https://www.youtube.com/embed/Abr_LU822rQ" 
     title="YouTube video player" 
     frameborder="0" 
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
     allowfullscreen>
-  </iframe>
-
+    </iframe>
+  </div>
+  <!-- HEADER -->
   <div>
+    <h1>It's Gotta Be the Shoes</h1>
+    <h2>A look into the shoes chosen by NBA stars</h2>
+    <h3>by Joe Maffa (2025)</h3>
+  </div>
+  <hr class="divider">
+  <!-- Intro -->
+  <div class="body-text">
     <p>
-      Here's an introduction. So many shoes... Here's a calendar
+      In 1985, Michael Jordan's iconic Air Jordan 1 shoe was released to the public for the first time, setting off a sneaker craze whose reverberations are still felt today. Fresh out of his rookie season in which Jordan led his Chicago Bulls to the playoffs for the first time in half a decade, was named an All-Star starter, and earned the Rookie of the Year award, Jordan attracted the eyes of sportswear giants like Adidas and Converse for a lucrative sponsorship deal. However, despite the prestige of these companies, Jordan decided to sign with a newcomer on the scene which specialized in running shoes. In 1984, Jordan signed with Nike to develop not only his own line of shoes, but his own brand. 39 signature shoes later, the Jordan brand has amassed billions of dollars in revenue, continuing to be a symbol not only of basketball greatness, but also streetwear style.
+    </p>
+    <p>
+      Today, Air Jordans and other sneakers have seeped into the world of fashion. These sporty styles have generated collaborations with high fashion brands such as Off-White, Dior, Chanel as well as localized streetwear brands like Clot, Sacai, and Wales Bonner. As the sneaker market exploded, my own interest in collecting sneaker culture grew. Throughout high school and college, I attended sneaker conventions, store releases, and spent countless hours on online forums searching for those holy grails at a palatable price. I became obsessed with the stories that these shoes had to tell and the connections that could be created in the process of obtaining them and wearing them for the world to see. 
+    </p>
+    <p>
+      This past year, I’ve rediscovered my love for the sport of basketball, a microcosm of fashion in its own right that carves interwoven paths within sneaker culture. Many of the stars of the NBA have their own line of sneakers that are custom designed to fit their needs and reflect their personality. Besides the signature lines, players also have their own “player exclusives” which are visually altered specifically for them and not available for public release. Looking at the myriad of shoes and player exclusives that the players chose to wear night in and night out made me look back to the source. My obsession with sneakers has shifted so far into the world of fashion, that I’ve lost sight of the primary purpose for which these shoes were made. 
+    </p>
+    <p>
+      These are performance shoes first, but how do they actually complement the star’s playing style? How do they determine which shoes to wear? Which shoes reign supreme over the NBA? Do the names attached to these actually hold any weight? As Spike Lee asked in his famous commercial for the Air Jordan 5, what makes you the best player in the universe?
+    </p>
+    <p>
+      Using (what appears to be) crowd-sourced data from KixStats.com (https://kixstats.com/) over the 2023-2024 and 2024-2025 NBA seasons, I sought to answer some of these questions.
     </p>
   </div>
-  <div>Graph 1: Here's a calendar of the most popular shoe worn for the past two seasons</div>
-  <img src="calendar_plot_1.png" alt="Most worn shoes in the NBA for 23-24 and 24-25 seasons." />
-  <h2>Change in BPM and Player Usage by Signature Star</h2>
+  <hr class="divider">
+  <!-- Transition into Chart 1 -->
+  <div>
+    <p>
+    Below is a chart of the most worn shoe of each day of the past two NBA seasons. Even unseasoned basketball fans should be able to recognize some of the most iconic names of the sport in these shoes. Superstars like Kevin Durant, LeBron James, James Harden, Damian Lillard, and even WNBA stars like Sabrina Ionescu not only capture the attention of casual players looking for their first pair of basketball shoes, but also the best players in the world. Still, one name—and particularly one shoe—seems to be the clear cut choice for most players.
+    </p>
+  </div>
 
-  <div>Here's the second graph. How much do people really care about the superstars?</div>
+  <img src="calendar_plot_1.png" alt="Most worn shoes in the NBA for 23-24 and 24-25 seasons." />
+  <!-- Explanation of Chart 1 and transition into 2 -->
+  <div class="body-text">
+    <p>
+      What is it about Kobe Bryant’s line of shoes and specifically the Kobe 6 that attracts so many players? 
+    </p>
+    <p>
+      This article https://snkrdunk.com/en/magazine/2025/02/12/why-is-the-nike-kobe-6-popular-with-nba-players/  from Snkrdunk Magazine explains that the Kobe line offers many performance benefits compared to other basketball shoes. The Kobe 6 in particular boasts excellent traction, cushioning, and an ability to mold to the user’s feet the more they play in it. When designing his shoes, Kobe took inspiration from soccer players’ shoes, noting that their low cut (a non traditional style for basketball) and light weight allowed for impressive agility and ability to cut quickly. In today’s NBA, more players are choosing to develop a game that thrives on speed through quick cuts across the court to make room for either threes or layups. Additionally, starting in 2018, Nike started releasing Protro (Performance Retro) versions of the Kobe line which were faithful to the original cosmetics of the shoe, but also offered improved technology to make them useful for the modern game.
+
+    </p>
+    <p>
+      These performance benefits are nothing to scoff at, but I think the most important reason is captured by a top comment on a YouTube video (https://www.youtube.com/watch?v=JXpJ1a4FXz4&ab_channel=LukasSimoner) about the shoes. @domdomayee explains that Kobe 6s offer “lightweight, solid traction, minimalist but very good cushion, top tier court feel, and they were worn by the guy who everyone in this [generation] grew up watching/looking up to.”
+
+    </p>
+    <p>
+      There is certainly something to be said about the power of the name attached to the shoes. After all, would you want to use the shoe of someone who doesn’t play the style of basketball that you want to play? Exploring the advanced metrics of the past two seasons of the NBA, I charted the difference in the superstar’s Box Plus Minus (a metric that roughly captures a player’s overall impact when they are on court—for more info on BPM, see here https://www.basketball-reference.com/about/bpm2.html) against the amount of distinct players in the NBA that wore their shoes that season. With the exceptions of Kobe Bryant and Michael Jordan who did not play in either of the last two seasons, we see some interesting findings.
+    </p>
+  </div>
+
   <div id="container" style="display: flex; width: 100vw; height: 90vh;">
     <div class="chart-container">
         <svg id="chart1"></svg>
@@ -49,10 +92,32 @@
 
     </div>
   </div>
+  <!-- Explanation of chart 2 + transition to 3 -->
+  <div class="body-text">
+    <p>
+      Notably, risers in BPM like Giannis Antetokounmpo and Damian Lillard saw decreases in the use of their shoes over the two seasons. In fact, for the most part, those that saw the greatest increase in their shoe usage like Sabrina Ionescu, and Devin Booker had worse seasons than before. Interestingly, both of their first signature shoes (Nike Sabrina 1 & Nike Book 1) were released during the 2023-24 season. Legacy names like LeBron James, Kevin Durant, and Paul George both saw their individual performance and their shoe’s popularity decrease in the two seasons. Meanwhile, rising stars like Luka Doncic and Anthony Edwards are trending in opposite directions. Perhaps this is signalling some changing of the guard from the basketball giants of the 2010s to a new generation of talent.
+    </p>
+    <p>
+      Analyzing the data from season to season, while interesting, does not actually get to the core of the question however. As much as people may look up to these stars, how does wearing their shoes actually affect performance? Averaging the combined data from the past two seasons for players who have played at least 10 games in both shoes associated with a superstar’s name and non signature shoes, the chart below shows the difference in their game score (a metric that captures the quantifiable parts of a player’s box score—for more info on game score, see here https://www.nbastuffer.com/analytics101/game-score/) when wearing a signature star’s shoe.
+    </p>
+  </div>
   <img src="gamescore.png" alt="Game Score differential when wearing vs. not wearing signature shoes." />
-  <div id="how">
-    <p>How I made this</p>
-    <p>Yada yada Python, scraped data, r studio, illustrator, kixstats.</p>
+  <div class="body-text">
+    <p>
+      We again find some fun discoveries. Namely, despite the huge weight that Nike has held over the sneaker industry for the past couple decades, capturing the likes of LeBron James, Kevin Durant, and Giannis Antetokounmpo, it seems that Adidas is starting to pull ahead as the performance leader in the industry, taking 2 of the top 3 spots. According to these trends (and recent playoff success), it seems that Anthony Edwards is a name to really keep an eye on for the next couple of years in terms of star power and performance benefit.
+    </p>
+  </div>
+  <hr class="divider">
+  <div class="body-text">
+    <p>
+      It’s hard to say if it has to be the sneakers that make the players, but I’m sure that there is something there. The hunger to be like the greats is the first step to becoming one, and all of that starts with what you are bringing to the court. Of course, many of these statistics are averaged over so many data points that it is hard to draw actual causation from any of the trends. Still, this was an extremely fun project for the sneaker lover in me, and also a great thing to work on as I am watching the 2025 NBA Playoffs. Go Celtics :) 
+    </p>
+  </div>
+  <hr class="divider"> 
+  <div id="body-text">
+    <p>
+      I made this project using data from KixStats.com https://kixstats.com/. While I am sure there are mistakes in the data, this seemed to be the most reliable source of information on the internet. Thank you to the creators for maintaining this rich database. Information on the shoes and their history primarily came from ESPN https://www.espn.com/espn/feature/story/_/id/39771146/sneakerhead-guide-every-nba-wnba-signature-sneaker-history#/. I used Python with Beautiful Soup to scrape the data for each tracked shoe on the website for the past two seasons. The charts were made in R and D3 polished with Adobe Illustrator. 
+    </p>
   </div>
 
 
