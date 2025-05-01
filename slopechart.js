@@ -48,43 +48,43 @@ const notesData = [
     note: "Kobe Bryant was retired in both seasons and has no BPM data. He was previously signed with Adidas.",
     image: "kobe.png",
     alt: "Kobe 4",
-    cap: "Nike Kobe line",
+    cap: "Nike Kobe",
   },
   {
     star: "Sabrina Ionescu",
-    note: "Sabrina Ionescu played in the 2023 and 2024 WNBA seasons. While there is no readily available Box +/- data for these seasons, her <a href='https://www.nbastuffer.com/analytics101/player-impact-estimate-pie/' target='_blank'>Player Impact Estimate</a> went from 13.8 to 13.4 hence the difference captured on the chart. ",
+    note: "Sabrina Ionescu played in the 2023 and 2024 WNBA seasons. While there is no readily available Box +/- data for these seasons, her <a href='https://www.nbastuffer.com/analytics101/player-impact-estimate-pie/' target='_blank'>Player Impact Estimate</a> went from 13.8 to 13.4.",
     image: "sabrina.png",
     alt: "Sabrina 1",
-    cap: "Nike Sabrina line",
+    cap: "Nike Sabrina",
   },
   {
     star: "Michael Jordan",
     note: "Michael Jordan was retired in both seasons and has no BPM data.",
     image: "jordan.png",
     alt: "Jordan 1",
-    cap: "Nike Air Jordan brand",
+    cap: "Nike Air Jordan",
   },
-  { star: "Kevin Durant", image: "kd.png", alt: "KD 4", cap: "Nike KD line" },
-  { star: "LeBron James", image: "lebron.png", alt: "LeBron 15", cap: "Nike LeBron line" },
+  { star: "Kevin Durant", image: "kd.png", alt: "KD 4", cap: "Nike KD" },
+  { star: "LeBron James", image: "lebron.png", alt: "LeBron 15", cap: "Nike LeBron" },
   {
     star: "Giannis Antetokounmpo",
     image: "giannis.png",
     alt: "Freak 5",
-    cap: "Nike Freak line",
+    cap: "Nike Freak",
   },
-  { star: "Kyrie Irving", note: "Kyrie Irving was previously signed with Nike.", image: "kyrie.png", alt: "Kai 2", cap: "Anta Kai line" },
-  { star: "Ja Morant", image: "ja.png", alt: "Ja 1", cap: "Nike Ja line" },
-  { star: "Damian Lillard", image: "dame.png", alt: "Dame 9", cap: "adidas Dame line" },
-  { star: "James Harden", image: "harden.png", alt: "Harden Vol. 9", cap: "adidas Harden line" },
-  { star: "Paul George", image: "pg.png", alt: "PG 2", cap: "Nike PG line" },
-  { star: "Devin Booker", image: "book.png", alt: "Book 1", cap: "Nike Book line" },
-  { star: "Donovan Mitchell", image: "spida.png", alt: "D.O.N. Issue 3", cap: "adidas D.O.N. line" },
-  { star: "Luka Doncic", image: "luka.png", alt: "Luka 1", cap: "Nike Jordan Luka line" },
-  { star: "Anthony Edwards", image: "ant.png", alt: "AE 1", cap: "adidas AE line" },
-  { star: "Jayson Tatum", image: "tatum.png", alt: "Tatum 1", cap: "Nike Jordan Tatum line" },
-  { star: "LaMelo Ball", image: "melo.png", alt: "MB.02", cap: "Puma MB line" },
-  { star: "Stephen Curry", image: "curry.png", alt: "Curry 11", cap: "Under Armour Curry brand" },
-  { star: "Zion Williamson", image: "zion.png", alt: "Zion 1", cap: "Nike Jordan Zion line" },
+  { star: "Kyrie Irving", note: "Kyrie Irving was previously signed with Nike.", image: "kyrie.png", alt: "Kai 2", cap: "Anta Kai" },
+  { star: "Ja Morant", image: "ja.png", alt: "Ja 1", cap: "Nike Ja" },
+  { star: "Damian Lillard", image: "dame.png", alt: "Dame 9", cap: "adidas Dame" },
+  { star: "James Harden", image: "harden.png", alt: "Harden Vol. 9", cap: "adidas Harden" },
+  { star: "Paul George", image: "pg.png", alt: "PG 2", cap: "Nike PG" },
+  { star: "Devin Booker", image: "book.png", alt: "Book 1", cap: "Nike Book" },
+  { star: "Donovan Mitchell", image: "spida.png", alt: "D.O.N. Issue 3", cap: "adidas D.O.N." },
+  { star: "Luka Doncic", image: "luka.png", alt: "Luka 1", cap: "Nike Jordan Luka" },
+  { star: "Anthony Edwards", image: "ant.png", alt: "AE 1", cap: "adidas AE" },
+  { star: "Jayson Tatum", image: "tatum.png", alt: "Tatum 1", cap: "Nike Jordan Tatum" },
+  { star: "LaMelo Ball", image: "melo.png", alt: "MB.02", cap: "Puma MB" },
+  { star: "Stephen Curry", image: "curry.png", alt: "Curry 11", cap: "Under Armour Curry" },
+  { star: "Zion Williamson", image: "zion.png", alt: "Zion 1", cap: "Nike Jordan Zion" },
 ];
 
 function updateTooltipAndHighlight(star) {
@@ -116,7 +116,7 @@ const tooltip = d3.select("#tooltip");
 
 function drawSlopeChart(svgId, data, yLabel, yAxisSide = "left") {
   const width = 500;
-  const height = 400;
+  const height = 600;
 
   const svg = d3.select(svgId).attr("width", width).attr("height", height);
 
@@ -218,29 +218,37 @@ function drawSlopeChart(svgId, data, yLabel, yAxisSide = "left") {
     .attr("x1", x("2023-24"))
     .attr("y1", (d) => y(d.season1))
     .attr("x2", x("2024-25"))
-    .attr("y2", (d) => y(d.season2));
+    .attr("y2", (d) => y(d.season2))
+    .attr("stroke", (d) => {
+      if (d.season2 > d.season1) return "#008853";
+      else if (d.season2 < d.season1) return "#dc143c"; 
+      else return "gray"; 
+    })
 
   lines
     .append("circle")
     .attr("class", (d) => `circle circle-${cssSafe(d.star)}`)
     .attr("cx", x("2023-24"))
     .attr("cy", (d) => y(d.season1))
-    .attr("r", 3);
+    .attr("r", 3)
+    .attr("fill", (d) => {
+      if (d.season2 > d.season1) return "#008853";
+      else if (d.season2 < d.season1) return "#dc143c";
+      else return "gray";
+    });
 
   lines
     .append("circle")
     .attr("class", (d) => `circle circle-${cssSafe(d.star)}`)
     .attr("cx", x("2024-25"))
     .attr("cy", (d) => y(d.season2))
-    .attr("r", 3);
+    .attr("r", 3)
+    .attr("fill", (d) => {
+      if (d.season2 > d.season1) return "#008853";
+      else if (d.season2 < d.season1) return "#dc143c";
+      else return "gray";
+    });
 
-  // lines
-  //   .append("text")
-  //   .attr("x", x("2024-25") + 5)
-  //   .attr("y", (d) => y(d.season2))
-  //   .attr("alignment-baseline", "middle")
-  //   .attr("class", "label")
-  //   .text((d) => d.star);
 
   // Dotted vertical season lines
   ["2023-24", "2024-25"].forEach((season) => {

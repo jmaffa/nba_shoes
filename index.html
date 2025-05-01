@@ -42,7 +42,7 @@
       These are performance shoes first, but how do they actually complement the star’s playing style? How do they determine which shoes to wear? Which shoes reign supreme over the NBA? Do the names attached to these actually hold any weight? As Spike Lee asked in his famous commercial for the Air Jordan 5, what makes you the best player in the universe?
     </p>
     <p>
-      Using (what appears to be) crowd-sourced data from KixStats.com (https://kixstats.com/) over the 2023-2024 and 2024-2025 NBA seasons, I sought to answer some of these questions.
+      Using (what appears to be) crowd-sourced data from <a href='https://kixstats.com/' target='_blank'>KixStats.com</a> over the 2023-2024 and 2024-2025 NBA seasons, I sought to answer some of these questions.
     </p>
   </div>
   <hr class="divider">
@@ -60,19 +60,19 @@
       What is it about Kobe Bryant’s line of shoes and specifically the Kobe 6 that attracts so many players? 
     </p>
     <p>
-      This article https://snkrdunk.com/en/magazine/2025/02/12/why-is-the-nike-kobe-6-popular-with-nba-players/  from Snkrdunk Magazine explains that the Kobe line offers many performance benefits compared to other basketball shoes. The Kobe 6 in particular boasts excellent traction, cushioning, and an ability to mold to the user’s feet the more they play in it. When designing his shoes, Kobe took inspiration from soccer players’ shoes, noting that their low cut (a non traditional style for basketball) and light weight allowed for impressive agility and ability to cut quickly. In today’s NBA, more players are choosing to develop a game that thrives on speed through quick cuts across the court to make room for either threes or layups. Additionally, starting in 2018, Nike started releasing Protro (Performance Retro) versions of the Kobe line which were faithful to the original cosmetics of the shoe, but also offered improved technology to make them useful for the modern game.
+      An <a href='https://snkrdunk.com/en/magazine/2025/02/12/why-is-the-nike-kobe-6-popular-with-nba-players/' target='_blank'>article</a> from Snkrdunk Magazine explains that the Kobe line offers many performance benefits compared to other basketball shoes. The Kobe 6 in particular boasts excellent traction, cushioning, and an ability to mold to the user’s feet the more they play in it. When designing his shoes, Kobe took inspiration from soccer players’ shoes, noting that their low cut (a non traditional style for basketball) and light weight allowed for impressive agility and ability to cut quickly. In today’s NBA, more players are choosing to develop a game that thrives on speed through quick cuts across the court to make room for either threes or layups. Additionally, starting in 2018, Nike started releasing Protro (Performance Retro) versions of the Kobe line which were faithful to the original cosmetics of the shoe, but also offered improved technology to make them useful for the modern game.
 
     </p>
     <p>
-      These performance benefits are nothing to scoff at, but I think the most important reason is captured by a top comment on a YouTube video (https://www.youtube.com/watch?v=JXpJ1a4FXz4&ab_channel=LukasSimoner) about the shoes. @domdomayee explains that Kobe 6s offer “lightweight, solid traction, minimalist but very good cushion, top tier court feel, and they were worn by the guy who everyone in this [generation] grew up watching/looking up to.”
+      These performance benefits are nothing to scoff at, but I think the most important reason is captured by a top comment on a <a href='https://www.youtube.com/watch?v=JXpJ1a4FXz4&ab_channel=LukasSimoner' target='_blank'>YouTube video</a> about the shoes. @domdomayee explains that Kobe 6s offer “lightweight, solid traction, minimalist but very good cushion, top tier court feel, and they were worn by the guy who everyone in this [generation] grew up watching/looking up to.”
 
     </p>
     <p>
-      There is certainly something to be said about the power of the name attached to the shoes. After all, would you want to use the shoe of someone who doesn’t play the style of basketball that you want to play? Exploring the advanced metrics of the past two seasons of the NBA, I charted the difference in the superstar’s Box Plus Minus (a metric that roughly captures a player’s overall impact when they are on court—for more info on BPM, see here https://www.basketball-reference.com/about/bpm2.html) against the amount of distinct players in the NBA that wore their shoes that season. With the exceptions of Kobe Bryant and Michael Jordan who did not play in either of the last two seasons, we see some interesting findings.
+      There is certainly something to be said about the power of the name attached to the shoes. After all, would you want to use the shoe of someone who doesn’t play the style of basketball that you want to play? Exploring the advanced metrics of the past two seasons of the NBA, I charted the difference in the superstar’s Box Plus Minus (a metric that roughly captures a player’s overall impact when they are on court—for more info on BPM, see <a href='https://www.basketball-reference.com/about/bpm2.html' target='_blank'>here</a>) against the amount of distinct players in the NBA that wore their shoes that season. With the exceptions of Kobe Bryant and Michael Jordan who did not play in either of the last two seasons, we see some interesting findings.
     </p>
   </div>
 
-  <div id="container" style="display: flex; width: 100vw; height: 90vh;">
+  <div id="container">
     <div class="chart-container">
         <svg id="chart1"></svg>
       </div>
@@ -81,15 +81,14 @@
       </div>
       <div id="tooltip" class="tooltip">
         <h3 id="tooltip-name">Hover to learn more about each player's stats and signature shoe line</h3>
-        <p id="tooltip-note" style="visibility: hidden;">Signature player line</p>
         <p style="visibility: hidden;">Box +/- (23–24): <span id="bpm23"></span></p>
         <p style="visibility: hidden;">Box +/- (24–25): <span id="bpm24"></span></p>
         <p style="visibility: hidden;"># Players using shoes (23–24): <span id="usage23"></span></p>
         <p style="visibility: hidden;"># Players using shoes (24–25): <span id="usage24"></span></p>
-        <img id="tooltip-img" src="" alt="Shoe image" style="width: 120px; margin-top: 10px; visibility: hidden;" />
-        <p style="visibility: hidden;"><span id="caption"></span></p>
+        <p id="tooltip-note" style="visibility: hidden;">Signature player line</p>
+        <img id="tooltip-img" src="" alt="Shoe image" style="width: 250px; visibility: hidden;" />
+        <p style="visibility: hidden;" id="caption"></p>
       </div>
-
     </div>
   </div>
   <!-- Explanation of chart 2 + transition to 3 -->
@@ -98,7 +97,7 @@
       Notably, risers in BPM like Giannis Antetokounmpo and Damian Lillard saw decreases in the use of their shoes over the two seasons. In fact, for the most part, those that saw the greatest increase in their shoe usage like Sabrina Ionescu, and Devin Booker had worse seasons than before. Interestingly, both of their first signature shoes (Nike Sabrina 1 & Nike Book 1) were released during the 2023-24 season. Legacy names like LeBron James, Kevin Durant, and Paul George both saw their individual performance and their shoe’s popularity decrease in the two seasons. Meanwhile, rising stars like Luka Doncic and Anthony Edwards are trending in opposite directions. Perhaps this is signalling some changing of the guard from the basketball giants of the 2010s to a new generation of talent.
     </p>
     <p>
-      Analyzing the data from season to season, while interesting, does not actually get to the core of the question however. As much as people may look up to these stars, how does wearing their shoes actually affect performance? Averaging the combined data from the past two seasons for players who have played at least 10 games in both shoes associated with a superstar’s name and non signature shoes, the chart below shows the difference in their game score (a metric that captures the quantifiable parts of a player’s box score—for more info on game score, see here https://www.nbastuffer.com/analytics101/game-score/) when wearing a signature star’s shoe.
+      Analyzing the data from season to season, while interesting, does not actually get to the core of the question however. As much as people may look up to these stars, how does wearing their shoes actually affect performance? Averaging the combined data from the past two seasons for players who have played at least 10 games in both shoes associated with a superstar’s name and non signature shoes, the chart below shows the difference in their game score (a metric that captures the quantifiable parts of a player’s box score—for more info on game score, see <a href='https://www.nbastuffer.com/analytics101/game-score/' target='_blank'>here</a>) when wearing a signature star’s shoe.
     </p>
   </div>
   <img src="gamescore.png" alt="Game Score differential when wearing vs. not wearing signature shoes." />
@@ -116,7 +115,7 @@
   <hr class="divider"> 
   <div id="body-text">
     <p>
-      I made this project using data from KixStats.com https://kixstats.com/. While I am sure there are mistakes in the data, this seemed to be the most reliable source of information on the internet. Thank you to the creators for maintaining this rich database. Information on the shoes and their history primarily came from ESPN https://www.espn.com/espn/feature/story/_/id/39771146/sneakerhead-guide-every-nba-wnba-signature-sneaker-history#/. I used Python with Beautiful Soup to scrape the data for each tracked shoe on the website for the past two seasons. The charts were made in R and D3 polished with Adobe Illustrator. 
+      I made this project using data from <a href='https://kixstats.com/' target='_blank'>KixStats.com</a>. While I am sure there are mistakes in the data, this seemed to be the most reliable source of information on the internet. Thank you to the creators for maintaining this rich database. Information on the shoes and their history primarily came from <a href='https://www.espn.com/espn/feature/story/_/id/39771146/sneakerhead-guide-every-nba-wnba-signature-sneaker-history#/' target='_blank'>ESPN</a>. I used <a href='https://www.python.org/' target='_blank'>Python</a> with <a href='https://beautiful-soup-4.readthedocs.io/en/latest/' target='_blank'>Beautiful Soup</a> to scrape the data for each tracked shoe on the website for the past two seasons. The charts were made with <a href='https://www.tidyverse.org/' target='_blank'>TidyVerse</a> and <a href='https://d3js.org/' target='_blank'>D3</a> and polished with <a href='https://www.adobe.com/products/illustrator.html' target='_blank'>Adobe Illustrator</a>. You can find the data on my <a href='https://github.com/jmaffa/nba_shoes' target='_blank'>GitHub</a>.
     </p>
   </div>
 
