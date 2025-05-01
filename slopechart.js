@@ -84,7 +84,7 @@ const notesData = [
   { star: "Jayson Tatum", image: "tatum.png", alt: "Tatum 1", cap: "Nike Jordan Tatum line" },
   { star: "LaMelo Ball", image: "melo.png", alt: "MB.02", cap: "Puma MB line" },
   { star: "Stephen Curry", image: "curry.png", alt: "Curry 11", cap: "Under Armour Curry brand" },
-  { star: "Zion Williamson", image: "kd.png", alt: "Zion 1", cap: "Nike Jordan Zion line" },
+  { star: "Zion Williamson", image: "zion.png", alt: "Zion 1", cap: "Nike Jordan Zion line" },
 ];
 
 function updateTooltipAndHighlight(star) {
