@@ -6,8 +6,8 @@ body, html {
 }
 #container {
   display: flex;
-  flex-direction: row; /* default is row, but being explicit helps */
-  align-items: center; /* 🔥 this centers chart-containers vertically */
+  flex-direction: row; 
+  align-items: center; 
   width: 100vw;
   height: 90vh;
 }
@@ -17,7 +17,7 @@ body, html {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100%; /* this ensures the inner flex items take full height */
+  height: 100%;
 }
 
 img, p, h1, h2, h3, .divider, iframe{
